@@ -6,6 +6,7 @@ with open('conflict_data_full_lined.json', encoding='utf8') as file:
 
 total_deaths = 0
 with open('yugoslavia_death_data.csv', 'w', encoding='utf8') as file:
+    file.write('deaths,date,\n')
     for datum in data:
         if 'Yugoslavia' in datum['country'] and datum['year'] == 1991:
             country = datum['country']
@@ -15,7 +16,7 @@ with open('yugoslavia_death_data.csv', 'w', encoding='utf8') as file:
             #print(f'Number of deaths {datum["best"]}')
 
             # Converting json data to csv
-            file.write(f'{country},{deaths}\n')
+            file.write(f"{deaths},{datum['date_start']}\n")
     
 
 
