@@ -16,4 +16,5 @@ deaths <- read_csv('yugoslavia_death_data.csv')
 ggplot(deaths) +
   geom_point(mapping = aes(x = date, y = deaths)) + 
   ggtitle("Number of deaths per reported incident")
+  ggsave("plot_death_date.png")
 ```
