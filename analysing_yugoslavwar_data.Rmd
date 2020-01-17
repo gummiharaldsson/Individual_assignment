@@ -9,12 +9,14 @@ library('tidyverse')
 
 ```{r}
 #loading the csv file
-deaths <- read_csv('yugoslavia_death_data.csv')
+deaths <- read_csv('yugoslavia_death_data_sep.csv')
 ```
 
 ```{r}
 ggplot(deaths) +
-  geom_point(mapping = aes(x = date, y = deaths)) + 
+  geom_point(mapping = aes(x = date, y = deaths, color)) + 
   ggtitle("Number of deaths per reported incident")
-  ggsave("plot_death_date.png")
+  ggsave("plot_death_date_sep.png")
+```
+
 ```
