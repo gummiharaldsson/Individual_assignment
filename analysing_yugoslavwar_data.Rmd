@@ -19,4 +19,9 @@ ggplot(deaths) +
   ggsave("plot_death_date_sep.png")
 ```
 
+```{r}
+library('xtable')
+
+print(xtable(deaths))
+
 ```
